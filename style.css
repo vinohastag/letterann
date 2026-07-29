@@ -20,10 +20,9 @@ body{
 .container{
     position:relative;
     width:100%;
-    height:100vh;
+    min-height:100vh;
     overflow:hidden;
 }
-
 
 /* Pages */
 
@@ -44,7 +43,6 @@ body{
 
     transition:transform 1s ease;
 }
-
 
 /* Cover */
 
@@ -96,13 +94,12 @@ body{
 
     transform:translateX(100%);
 
-    overflow-y:auto;
-    overflow-x:hidden;
-
     justify-content:flex-start;
 
     padding-top:80px;
-    padding-bottom:50px;
+    padding-bottom:80px;
+
+    overflow:visible;
 }
 
 
@@ -203,6 +200,12 @@ body{
 
 @media(max-width:768px){
 
+    html, body{
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+
+
     .page{
         padding:25px;
     }
@@ -210,6 +213,7 @@ body{
 
     .cover{
         padding:40px 20px;
+        justify-content:center;
     }
 
 
@@ -230,26 +234,28 @@ body{
     .cover button{
         width:90%;
         max-width:320px;
-
         padding:15px;
         font-size:17px;
     }
 
 
     .letter{
-    display:block;
 
-    padding-top:75px;
-    padding-bottom:40px;
+        display:flex;
 
-    overflow-y:auto;
-    -webkit-overflow-scrolling:touch;
-}
+        justify-content:flex-start;
+
+        padding-top:75px;
+        padding-bottom:100px;
+
+        overflow:visible;
+    }
 
 
     .letter h1{
         font-size:2rem;
         margin-bottom:20px;
+        text-align:center;
     }
 
 
@@ -261,6 +267,8 @@ body{
         line-height:1.8;
 
         padding:20px;
+
+        margin:15px auto;
     }
 
 
