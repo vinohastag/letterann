@@ -84,7 +84,13 @@ body{
     color:#d63384;
 
     cursor:pointer;
+
+    transition: 3s;
 }
+
+.cover button:hover{
+    background:#ffe4f2;
+    transform:scale(1.15); }
 
 
 /* Letter */
@@ -150,6 +156,13 @@ body{
 
     background:#8A2BE2;
     color:white;
+
+    transition: 3s;
+}
+
+#backBtn:hover {
+    background:#6A1BB8;
+    transform:scale(1.05);
 }
 
 
