@@ -4,10 +4,10 @@
     box-sizing:border-box;
 }
 
-html, body{
+html,body{
     width:100%;
-    min-height:100%;
-    overflow-x:hidden;
+    height:100%;
+    overflow:hidden;
 }
 
 body{
@@ -20,19 +20,19 @@ body{
 .container{
     position:relative;
     width:100%;
-    min-height:100vh;
+    height:100dvh;
     overflow:hidden;
 }
+
 
 /* Pages */
 
 .page{
     position:absolute;
-    top:0;
-    left:0;
+    inset:0;
 
     width:100%;
-    min-height:100vh;
+    height:100dvh;
 
     display:flex;
     flex-direction:column;
@@ -43,21 +43,25 @@ body{
     transition:transform 1s ease;
 }
 
+
 /* Cover */
 
 .cover{
     background:linear-gradient(135deg,#7F3FBF,#FF69B4);
     color:white;
     text-align:center;
-    z-index:2;
-    transform:translateX(0);
     justify-content:center;
+    z-index:2;
+
+    transform:translateX(0);
 }
+
 
 .cover h1{
     font-size:3rem;
     margin-bottom:25px;
 }
+
 
 .cover p{
     width:700px;
@@ -67,8 +71,10 @@ body{
     margin-bottom:35px;
 }
 
+
 .cover button{
     padding:25px 35px;
+
     font-size:18px;
 
     border:none;
@@ -78,12 +84,6 @@ body{
     color:#d63384;
 
     cursor:pointer;
-    transition:.3s;
-}
-
-.cover button:hover{
-    background:#ffe4f2;
-    transform:scale(1.15);
 }
 
 
@@ -94,12 +94,15 @@ body{
 
     transform:translateX(100%);
 
+    overflow-y:auto;
+    overflow-x:hidden;
+
     justify-content:flex-start;
 
     padding-top:80px;
     padding-bottom:100px;
 
-    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
 }
 
 
@@ -130,7 +133,7 @@ body{
 }
 
 
-/* Back Button */
+/* Back */
 
 #backBtn{
     position:fixed;
@@ -147,14 +150,6 @@ body{
 
     background:#8A2BE2;
     color:white;
-
-    font-size:16px;
-
-    cursor:pointer;
-}
-
-#backBtn:hover{
-    background:#6A1B9A;
 }
 
 
@@ -173,20 +168,17 @@ body{
     right:40px;
 }
 
-
 .heart2{
     width:45px;
     bottom:60px;
     left:40px;
 }
 
-
 .heart3{
     width:55px;
     bottom:120px;
     right:80px;
 }
-
 
 .bear{
     width:150px;
@@ -196,15 +188,9 @@ body{
 
 
 
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:768px){
-
-    html, body{
-        overflow-y:auto;
-        overflow-x:hidden;
-    }
-
 
     .page{
         padding:25px;
@@ -213,69 +199,43 @@ body{
 
     .cover{
         padding:40px 20px;
-        justify-content:center;
     }
 
 
     .cover h1{
         font-size:2rem;
-        margin-bottom:20px;
     }
 
 
     .cover p{
-        width:100%;
         font-size:18px;
-        line-height:1.6;
-        margin-bottom:25px;
-    }
-
-
-    .cover button{
-        width:90%;
-        max-width:320px;
-        padding:15px;
-        font-size:17px;
     }
 
 
     .letter{
-
-        display:flex;
-
-        justify-content:flex-start;
-
-        padding-top:75px;
-        padding-bottom:100px;
-
-        overflow:visible;
+        height:100dvh;
+        overflow-y:scroll;
+        padding:80px 25px 120px;
+        display:block;
     }
 
 
     .letter h1{
         font-size:2rem;
         margin-bottom:20px;
-        text-align:center;
     }
 
 
     .letter p{
         width:100%;
         max-width:100%;
-
         font-size:17px;
-        line-height:1.8;
-
-        padding:20px;
-
-        margin:15px auto;
     }
 
 
     #backBtn{
         top:12px;
         left:12px;
-
         font-size:14px;
         padding:8px 16px;
     }
@@ -285,33 +245,11 @@ body{
     .heart2,
     .heart3{
         width:28px;
-        opacity:.8;
-    }
-
-
-    .heart1{
-        top:15px;
-        right:15px;
-    }
-
-
-    .heart2{
-        bottom:25px;
-        left:15px;
-    }
-
-
-    .heart3{
-        bottom:80px;
-        right:20px;
     }
 
 
     .bear{
         width:75px;
-        right:10px;
-        bottom:10px;
-        opacity:.8;
     }
 
 }
