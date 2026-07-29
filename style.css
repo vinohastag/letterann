@@ -14,16 +14,18 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
+
 /* Container */
 
 .container{
     position:relative;
     width:100%;
-    min-height:100dvh;
+    height:100vh;
     overflow:hidden;
 }
 
-/* Shared Page */
+
+/* Pages */
 
 .page{
     position:absolute;
@@ -31,7 +33,7 @@ body{
     left:0;
 
     width:100%;
-    min-height:100dvh;
+    height:100vh;
 
     display:flex;
     flex-direction:column;
@@ -51,7 +53,6 @@ body{
     color:white;
     text-align:center;
     z-index:2;
-
     transform:translateX(0);
 }
 
@@ -70,7 +71,6 @@ body{
 
 .cover button{
     padding:25px 35px;
-
     font-size:18px;
 
     border:none;
@@ -80,7 +80,6 @@ body{
     color:#d63384;
 
     cursor:pointer;
-
     transition:.3s;
 }
 
@@ -103,29 +102,25 @@ body{
     justify-content:flex-start;
 
     padding-top:80px;
+    padding-bottom:50px;
 }
 
 
 .letter h1{
     color:#8A2BE2;
-
     margin-bottom:30px;
-
     font-size:2.7rem;
-
     text-align:center;
 }
 
 
 .letter p{
-
     width:800px;
     max-width:90%;
 
     background:white;
 
     padding:20px;
-
     margin:12px 0;
 
     border-radius:15px;
@@ -133,47 +128,14 @@ body{
     box-shadow:0 8px 20px rgba(0,0,0,.15);
 
     font-size:18px;
-
     line-height:1.8;
-
     color:#444;
-}
-
-
-/* Buttons */
-
-.letter button{
-
-    margin-top:30px;
-
-    padding:12px 25px;
-
-    border:none;
-
-    border-radius:30px;
-
-    background:#8A2BE2;
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    transition:.3s;
-}
-
-
-.letter button:hover{
-    background:#6a1bb8;
-    transform:scale(1.05);
 }
 
 
 /* Back Button */
 
 #backBtn{
-
     position:fixed;
 
     top:15px;
@@ -184,11 +146,9 @@ body{
     padding:10px 20px;
 
     border:none;
-
     border-radius:30px;
 
     background:#8A2BE2;
-
     color:white;
 
     font-size:16px;
@@ -196,15 +156,16 @@ body{
     cursor:pointer;
 }
 
+#backBtn:hover{
+    background:#6A1B9A;
+}
+
 
 /* Stickers */
 
 .sticker{
-
     position:absolute;
-
     pointer-events:none;
-
     z-index:1;
 }
 
@@ -238,158 +199,108 @@ body{
 
 
 
-/* MOBILE */
+/* Mobile */
 
 @media(max-width:768px){
 
     .page{
         padding:25px;
-        min-height:100dvh;
     }
 
 
     .cover{
-
-        justify-content:center;
-
         padding:40px 20px;
     }
 
 
     .cover h1{
-
         font-size:2rem;
-
         margin-bottom:20px;
-
     }
 
 
     .cover p{
-
         width:100%;
-
         font-size:18px;
-
         line-height:1.6;
-
         margin-bottom:25px;
-
     }
 
 
     .cover button{
-
         width:90%;
-
         max-width:320px;
 
         padding:15px;
-
         font-size:17px;
-
     }
 
 
-
     .letter{
-
-        padding-top:80px;
-
+        padding-top:75px;
         padding-bottom:40px;
 
         justify-content:flex-start;
-
     }
 
 
     .letter h1{
-
         font-size:2rem;
-
         margin-bottom:20px;
-
     }
 
 
     .letter p{
-
         width:100%;
-
         max-width:100%;
 
         font-size:17px;
-
         line-height:1.8;
 
         padding:20px;
-
     }
-
 
 
     #backBtn{
-
         top:12px;
-
         left:12px;
 
         font-size:14px;
-
         padding:8px 16px;
-
     }
-
 
 
     .heart1,
     .heart2,
     .heart3{
-
         width:28px;
-
         opacity:.8;
-
     }
 
 
     .heart1{
-
         top:15px;
-
         right:15px;
-
     }
 
 
     .heart2{
-
         bottom:25px;
-
         left:15px;
-
     }
 
 
     .heart3{
-
         bottom:80px;
-
         right:20px;
-
     }
 
 
     .bear{
-
         width:75px;
-
         right:10px;
-
         bottom:10px;
-
         opacity:.8;
-
     }
 
 }
